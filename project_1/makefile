@@ -1,3 +1,5 @@
+//dana drakulich, cs 202-2010, 5/30/25
+
 analyzer: driver.o word_analyzer.o
 	g++ -o analyzer driver.o word_analyzer.o
 

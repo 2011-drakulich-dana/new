@@ -31,13 +31,28 @@ int getWords(int , int f1[], string filename){
 
 }
 
-
+int findMaxWord(int, int m1[]){
+	
+	string max
+	
+	for(int count = 1; count < m1.size(); count++){
+		max = m1[0]
+		if(m[i] > max){
+			m[i] = max
+		}
+	return max;
+}
 
 int main(int argc, char *argv[])
 {
 	string f1[SIZE];
 
-	getWords(SIZE, f1, inputFile);
+	
+	if(argc > 2){
+		string f1(argv[1]);
+	    	getWords(SIZE, f1, inputFile);
+
+	}
 	
 	cout << "There are " << countLetters(f1) << " letters in your file." << endl;
 	cout << "There are " << countLowerCase(f1) << " lower case letters in your file." << endl;
