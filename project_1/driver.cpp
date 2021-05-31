@@ -1,37 +1,31 @@
 //Dana Drakulich CS 202, 2010 Project_1
 
 #include <iostream>
-#include <fsteam>
+#include <fstream>
 #include <string>
 
 #define SIZE 50
 
 using namespace std;
 
-int getWords(int , int f1[], string filename)
-{
+int getWords(int , int f1[], string filename){
 	ifstream inputFile;
 	int count = 0;
 	
-	inputFile.open(filename)
+	inputFile.open(filename);
 	if (inputFile)
 	{
-		while (count < size && inputFile >> f1[count])
+		while (count < SIZE && inputFile >> f1[count]){
 			count++;
+		}
 		inputFile.close();
 		
-		//for practice
-		for (count = 0; count < size; count ++){
-			cout << f1[count] << " ";
-			cout << end1;
-		{
-
 	
 	}
 	else
 	{
 		cout << "Sorry, could not open poem.txt for reading";
-		inputFile.close()
+		inputFile.close();
 	}
 	return count;
 
@@ -39,15 +33,26 @@ int getWords(int , int f1[], string filename)
 
 
 
-int main()
+int main(int argc, char *argv[])
 {
 	string f1[SIZE];
 
-	getwords(SIZE, f1, inputFile);
+	getWords(SIZE, f1, inputFile);
 	
-	//cout << "there are" << countLetters(f1) << "" << end1;
+	cout << "There are " << countLetters(f1) << " letters in your file." << endl;
+	cout << "There are " << countLowerCase(f1) << " lower case letters in your file." << endl;
+	cout << "There are " << countUpperCase(f1) << " upper case letter in your file." << endl;
+	cout << "There are " << countVowels(f1) << " vowels in your file." << endl;
+	cout << "The last word alphabetically is: " << findMaxWord(f1) << endl;
 
 	return 0;
 }
+
+
+
+
+
+
+
 
 
